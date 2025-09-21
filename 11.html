@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        #driver-segment{
+            overflow-x: auto;
+            overflow-y: hidden;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Firefox */
+
+        }
+        .driver-segment::-webkit-scrollbar {
+        display: none;
+    }
+        .driver-card {
+        flex: 0 0 auto;   
+        width: 220px;     
+        height: 320px;
+        border-radius: 12px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 10px;
+    }
+
+
+    </style>
+</head>
+<body class="bg-[#0c0b10] ">
+    <header>
+        <div class="relative mx-auto px-4  flex justify-between items-center !bg-gray-800 overflow-hidden ">
+<div class="absolute left-0 right-0 top-0 h-[90px]                
+     bg-[repeating-linear-gradient(-60deg,_rgba(27,28,32,0.8)_0,_rgba(27,28,32,0.8)_20px,_rgba(11,12,16,0.8)_20px,_rgba(11,12,16,0.8)_60px)]                  
+     pointer-events-none">             
+</div>
+            <div class="flex items-center space-x-3">
+                <img src="./f1.images/f1-logo.png" class="h-[70px] px-6 w-auto block z-10">
+            </div>
+
+            <!--<div class="absolute left-0 right-0 top-0 h-20 
+                bg-[repeating-linear-gradient(-60deg,_#1b1c20_0,_#1b1c20_20px,_#0b0c10_20px,_#0b0c10_60px)] 
+                pointer-events-none">
+            </div>-->
+        <nav class="z-10">
+            <ul class=" flex space-x-10">
+                <li><a href="#" class="text-white font-[poppins] text-xl hover:text-red-600">Sign In</a></li>
+                <li><a href="#" class="text-white font-[poppins] text-xl hover:text-red-600">Subscribe</a></li>
+                <li><a href="#" class="text-white  font-[poppins] text-xl hover:text-red-600">Menu</a></li>
+           </ul>
+        </nav>
+         </div>
+        <!-- Secondary Navbar -->
+        <nav class="bg-gray-900 text-white px-6 py-3 font-[poppins]">
+            <ul class="flex justify-center gap-8">
+                <li><a  href="#" class="relative pb-2 hover:text-red-500 transition-colors duration-200 group">Schedule<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-200 group-hover:w-full"></span></a></li>
+                <li><a  href="#" class="relative pb-2 hover:text-red-500 transition-colors duration-200 group">News<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-200 group-hover:w-full"></span></a></li>
+                <li><a  href="#"class="relative pb-2 hover:text-red-500 transition-colors duration-200 group">Drivers<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-200 group-hover:w-full"></span></a></li>
+                <li><a  href="#"class="relative pb-2 hover:text-red-500 transition-colors duration-200 group">Teams<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-200 group-hover:w-full"></span></a></li>
+                <!--<li><button  id="updateRaceBtn" class="relative pb-2 text-white hover:text-red-500 transition-colors duration-200 group ">Upcoming Race<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-200 group-hover:w-full"></span></button></li>-->
+            </ul>
+          </nav>
+    </header>
+    <main>
+        <section id="news" class="bg-[#0c0b10] py-12 px-8">
+           <h2 class="text-5xl font-extrabold font-[bungee] text-white mb-8">LATEST NEWS</h2>
+           <div class="grid lg:grid-cols-2 gap-6">
+           <!--card 1-->
+           <article class="bg-[#1a1b1e] px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl transition flex items-center gap-4">
+            <img src="./f1.images/williams-driver.avif" class="h-20 w-18 rounded-md">
+           <h3 class="text-lg font-[barlow] font-semibold text-white">How Williams' 2025 season played out so far</h3>
+            
+           </article>
+           <!--card 2-->
+           <article class="bg-[#1a1b1e] p-4 rounded-xl shadow-lg hover:shadow-2xl transition flex items-center gap-4">
+            <img src="./f1.images/norris-piasti.webp" class="h-20 w-18 rounded-md">
+            <h3 class="text-lg font-[barlow] font-semibold text-white">8 of Mclaren's strongest line-ups before Norris and Piasti</h3>
+            </article>
+            <!--card 3-->
+           <article class="bg-[#1a1b1e] p-4 rounded-xl shadow-lg hover:shadow-2xl transition flex items-center gap-4">
+            <img src="./f1.images/norris2.webp" class="h-20 w-18 rounded-md">
+            <h3 class="text-lg font-[barlow] font-semibold text-white">How title-challenger Norris is redefining F1 fashion</h3>
+            </article>
+            <!--card 4-->
+            <article class="bg-[#1a1b1e] p-4 rounded-xl shadow-lg hover:shadow-2xl transition flex items-center gap-4">
+            <img src="./f1.images/aston-martin.webp" class="h-20 w-18 rounded-md">
+            <h3 class="text-lg font-[barlow] font-semibold text-white">How Aston-Martin's 2025 season has played out so far</h3>
+            </article>
+            <!--card 5-->
+            <article class="bg-[#1a1b1e] p-4 rounded-xl shadow-lg hover:shadow-2xl transition flex items-center gap-4">
+            <img src="./f1.images/hamilton.webp" class="h-20 w-18 rounded-md">
+            <h3 class="text-lg font-[barlow] font-semibold text-white">Hamilton shares more about his special Ferrari documents</h3>
+            </article>
+            <article class="bg-[#1a1b1e] p-4 rounded-xl shadow-lg hover:shadow-2xl transition flex items-center gap-4">
+            <img src="./f1.images/albon.webp" class="h-20 w-18 rounded-md">
+            <h3 class="text-lg font-[barlow] font-semibold text-white">Albon belives 2025 is his best season so far in F1</h3>
+            </article>
+            <!--card 6-->
+           
+         </div>
+        </section>
+
+        <section>
+            <h2 class="text-5xl font-extrabold font-[bungee] text-white px-6 py-8">DRIVERS</h2>
+
+            <!-- Custom scroll indicator -->
+<div class="mx-4 mb-4 scroll-indicator">
+    <div class="scroll-progress" id="scrollProgress"></div>
+</div>
+          
+         
+            <div id="driver-segment"class="flex overflow-x-auto overflow-y-hidden px-4  gap-6 snap-x snap-mandatory">
+                <!--card1-->
+               
+                <div class="driver-card relative w-52 h-80 rounded-xl  overflow-hidden ">
+                    <div class="absolute inset-0 bg-[repeating-linear-gradient(-45deg,_#ff8000_0px,_#ff8000_40px,_#d96500_40px,_#d96500_80px)]"></div>
+                    <img src="./f1.images/oscar_piastri.png"  alt="oscar Piastri"class="relative z-10 w-full h-3/4 object-cover">
+                    <div class=" absolute text-white top-3 left-0 right-0 text-center z-20">
+                        <p class="text-lg font-semibold">Oscar</p>
+                        <p class="text-xl font-extrabold">Piastri</p>
+                    </div>
+                </div>
+
+                
+                <!--card2-->
+                <div class="driver-card relative w-52 h-80 rounded-xl  overflow-hidden ">
+                    <div class="absolute inset-0 bg-[repeating-linear-gradient(-45deg,_#ff8000_0px,_#ff8000_40px,_#d96500_40px,_#d96500_80px)]"></div>
+                    <img src="./f1.images/landoNorris.png"  alt="oscar Piastri"class="relative z-10 w-full h-3/4 object-cover">
+                    <div class=" absolute text-white top-3 left-0 right-0 text-center z-20">
+                        <p class="text-lg font-semibold">Lando</p>
+                        <p class="text-xl font-extrabold">Norris</p>
+                    </div>
+                </div>
+
+                <!--card3-->
+                <div class="driver-card relative w-52 h-80 rounded-xl  overflow-hidden ">
+                    <div class="absolute inset-0 bg-[repeating-linear-gradient(-45deg,_#d10000_0px,_#d10000_40px,_#a00000_40px,_#a00000_80px)]"></div>
+                    <img src="./f1.images/charles1.png"  alt="oscar Piastri"class="relative z-10 w-full h-3/4 object-cover">
+                    <div class=" absolute text-white top-3 left-0 right-0 text-center z-20">
+                        <p class="text-lg font-semibold">Charles</p>
+                        <p class="text-xl font-extrabold">Lecleric</p>
+                    </div>
+                </div>
+
+                <!--card4-->
+                <div class="driver-card relative w-52 h-80 rounded-xl  overflow-hidden ">
+                    <div class="absolute inset-0 bg-[repeating-linear-gradient(-45deg,_#d10000_0px,_#d10000_40px,_#a00000_40px,_#a00000_80px)]"></div>
+                    <img src="./f1.images/lewisHamilton.png"  alt="oscar Piastri"class="relative z-10 w-full h-3/4 object-cover">
+                    <div class=" absolute text-white top-3 left-0 right-0 text-center z-20">
+                        <p class="text-lg font-semibold">Lewis</p>
+                        <p class="text-xl font-extrabold">Hamilton</p>
+                    </div>
+                </div>
+
+                <!--card5-->
+                <div class="driver-card relative w-52 h-80 rounded-xl  overflow-hidden ">
+                    <div class="absolute inset-0 bg-[repeating-linear-gradient(-45deg,_#00C6A0_0px,_#00C6A0_40px,_#00665C_40px,_#00665C_80px)]"></div>
+                    <img src="./f1.images/georgeRussell.png"  alt="oscar Piastri"class="relative z-10 w-full h-3/4 object-cover">
+                    <div class=" absolute text-white top-3 left-0 right-0 text-center z-20">
+                        <p class="text-lg font-semibold">George</p>
+                        <p class="text-xl font-extrabold">Russell</p>
+                    </div>
+                </div>
+
+                <!--card6-->
+                <div class="driver-card relative w-52 h-80 rounded-xl  overflow-hidden ">
+                    <div class="absolute inset-0 bg-[repeating-linear-gradient(-45deg,_#00C6A0_0px,_#00C6A0_40px,_#00665C_40px,_#00665C_80px)]"></div>
+                    <img src="./f1.images/kimiAntonelli.png"  alt="oscar Piastri"class="relative z-10 w-full h-3/4 object-cover">
+                    <div class=" absolute text-white top-3 left-0 right-0 text-center z-20">
+                        <p class="text-lg font-semibold">Kimi</p>
+                        <p class="text-xl font-extrabold">Antonelli</p>
+                    </div>
+                </div>
+
+                <!--card7-->
+                <div class="driver-card relative w-52 h-80 rounded-xl  overflow-hidden ">
+                    <div class="absolute inset-0 bg-[repeating-linear-gradient(-45deg,_#3C53D4_0px,_#3C53D4_40px,_#273DBE_40px,_#273DBE_80px)]"></div>
+                    <img src="./f1.images/maxVerstappen.png"  alt="oscar Piastri"class="relative z-10 w-full h-3/4 object-cover">
+                    <div class=" absolute text-white top-3 left-0 right-0 text-center z-20">
+                        <p class="text-lg font-semibold">Max</p>
+                        <p class="text-xl font-extrabold">Verstappen</p>
+                    </div>
+                </div>
+
+                <!--card8-->
+                <div class="driver-card relative w-52 h-80 rounded-xl  overflow-hidden ">
+                    <div class="absolute inset-0 bg-[repeating-linear-gradient(-45deg,_#3C53D4_0px,_#3C53D4_40px,_#273DBE_40px,_#273DBE_80px)]"></div>
+                    <img src="./f1.images/yukiTsunodza.png"  alt="oscar Piastri"class="relative z-10 w-full h-3/4 object-cover">
+                    <div class=" absolute text-white top-3 left-0 right-0 text-center z-20">
+                        <p class="text-lg font-semibold">Yuki</p>
+                        <p class="text-xl font-extrabold">Tsunodza</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="h-px bg-gray-600 w-full mx-4 my-8"></div>
+
+        <section>
+            <div class="bg-[#0b0c10] text-white p-8">
+  <div class="relative w-full h-2 bg-red-600 my-8">
+    <div class="absolute top-0 right-0 w-20 h-full bg-[linear-gradient(to_left,_#0b0c10_50%,_transparent_50%)]"></div>
+    </div>
+  <div class="mt-12 mb-4">
+    <h1 class="text-5xl font-extrabold font-[bungee] ">
+      <span class=>2025</span>
+      <span class=>SEASON</span>
+    </h1>
+  </div>
+
+  <div class="flex space-x-6 mt-12 mb-4">
+    <a href="#" class="relative pb-2 font-bold text-lg text-red-600 group">
+      Drivers
+      <span
+        class="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 transition-all duration-200"
+      ></span>
+    </a>
+    <a href="#" class="relative pb-2 font-bold text-lg text-gray-400 hover:text-red-600 transition-colors duration-200 group">
+      Teams
+      <span
+        class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-200 group-hover:w-full"
+      ></span>
+    </a>
+  </div>
+  
+  <div class="px-6 py-4">
+  <input id="driverSearch" type="text" placeholder="Search driver..." 
+         class="p-2 rounded-md mb-6 w-full bg-[#1a1b1e] text-white placeholder-gray-400">
+</div>
+
+    <div class="overflow-x-auto">
+  <table class="w-full text-left   ">
+    <thead class="text-gray-700">
+        <tr class="h-10 border-b border-gray-600">
+            <th class="px-4 py-3 font-semibold ">POS</th>
+            <th class="px-4 py-3 ">DRIVER</th>
+            <th class="px-4 py-3 ">NATIONALITY</th>
+            <th class="px-4 py-3 ">TEAM</th>
+            <th class="px-4 py-3 ">PTS.</th>
+        </tr>
+    </thead>
+    <tbody id="all-rows">
+        <!--row 1-->
+        <tr class="border-b border-gray-800">
+            <td class="px-4 py-4 font-bold ">1</td>
+            <td class="px-4 py-4">
+            <div class="flex items-center space-x-2">
+              <img src="./f1.images/oscar_piastri.png" class="w-6 h-6 rounded-full" alt="Driver Icon">
+              <span>Oscar Piastri</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">
+            <div class="flex items-center space-x-2">
+              <img src="./f1.images/australia.webp" class="w-6 h-6 rounded-full" alt="Driver Icon">
+              <span>Australia</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">Mclaren</td>
+          <td class="px-3 py-3 font-bold  rounded-r-lg">324</td>
+        </tr>
+        <!--row 2-->
+         <tr class="border-b border-gray-800">
+            <td class="px-4 py-4 font-bold ">2</td>
+            <td class="px-4 py-4">
+            <div class="flex items-center space-x-2">
+              <img src="./f1.images/landoNorris.png" class="w-6 h-6 rounded-full" alt="Driver Icon">
+              <span>Lando Norris</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">
+            <div class="flex items-center space-x-2">
+              <img src="./f1.images/ukflag.webp" class="w-6 h-6 rounded-full" alt="Driver Icon">
+              <span>United Kingdom</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">Mclaren</td>
+          <td class="px-3 py-3 font-bold  rounded-r-lg">293</td>
+        </tr>
+
+        <!--row 3-->
+         <tr class="border-b border-gray-800">
+            <td class="px-4 py-4 font-bold rounded-l-lg">3</td>
+            <td class="px-4 py-4">
+            <div class="flex items-center space-x-2">
+             <img src="./f1.images/maxVerstappen.png" class="w-6 h-6 rounded-full" alt="Driver Icon">
+              <span >Max Verstappen</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">
+            <div class="flex items-center space-x-2">
+              <img src="./f1.images/netherlandsflag.webp" class="w-6 h-6 rounded-full" alt="Driver Icon">
+              <span>Netherlands</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">Red Bull Racing</td>
+          <td class="px-3 py-3 font-bold  rounded-r-lg">230</td>
+        </tr>
+
+        <!--row 4-->
+         <tr class="border-b border-gray-800">
+            <td class="px-4 py-4 font-bold rounded-l-lg">4</td>
+            <td class="px-4 py-4">
+            <div class="flex items-center">
+            <img src="./f1.images/georgeRussell.png" class="h-6 w-6 rounded-full" alt="Driver Icon">
+              <span>George Russell</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">
+            <div class="flex items-center space-x-2">
+              <img src="./f1.images/ukflag.webp" class="w-6 h-6 rounded-full" alt="Driver Icon">
+              <span>United Kingdom</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">Mercedes</td>
+          <td class="px-3 py-3 font-bold  rounded-r-lg">194</td>
+        </tr>
+        <!--row 5-->
+         <tr class="border-b border-gray-800">
+            <td class="px-4 py-4 font-bold rounded-l-lg">5</td>
+            <td class="px-4 py-4">
+            <div class="flex items-center">
+            <img src="./f1.images/charles2new.png" class="h-6 w-6 rounded-full"alt="Driver Icon" >
+              <span >Charles Leclerec</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">
+            <div class="flex items-center space-x-2">
+              <img src="./f1.images/monaco flag.webp" class="w-6 h-6 rounded-full" alt="Driver Icon">
+              <span>Monaco</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">Ferrari</td>
+          <td class="px-3 py-3 font-bold  rounded-r-lg">163</td>
+        </tr>
+        
+        <!--row 6-->
+         <tr class="border-b border-gray-800">
+            <td class="px-4 py-4 font-bold rounded-l-lg">6</td>
+            <td class="px-4 py-4">
+            <div class="flex items-center">
+                <img src="./f1.images/lewisHamilton.png" class="h-6 w-6 rounded-full" alt="Driver Icon">
+              <span >Lewis Hamilton</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">
+            <div class="flex items-center space-x-2">
+              <img src="./f1.images/ukflag.webp" class="w-6 h-6 rounded-full" alt="Driver Icon">
+              <span>United Kingdom</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">Ferrari</td>
+          <td class="px-3 py-3 font-bold  rounded-r-lg">117</td>
+        </tr>
+
+         <!--row 7-->
+         <tr class="hidden border-b border-gray-800">
+            <td class="px-4 py-4 font-bold rounded-l-lg">7</td>
+            <td class="px-4 py-4">
+            <div class="flex items-center">
+                <img src="./f1.images/alexanderAlbon.png" class="h-6 w-6 rounded-full" alt="Driver Icon">
+              <span >Alexander Albon</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">
+            <div class="flex items-center space-x-2">
+              <img src="./f1.images/thailand.webp" class="w-6 h-6 rounded-full" alt="Driver Icon">
+              <span>Thailand</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">Williams</td>
+          <td class="px-3 py-3 font-bold  rounded-r-lg">70</td>
+        </tr>
+        
+         <!--row 8-->
+         <tr class=" hidden border-b border-gray-800">
+            <td class="px-4 py-4 font-bold rounded-l-lg">8</td>
+            <td class="px-4 py-4">
+            <div class="flex items-center">
+                <img src="./f1.images/kimiAntonelli.png" class="h-6 w-6 rounded-full" alt="Driver Icon">
+              <span >Kimi Antonelli</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">
+            <div class="flex items-center space-x-2">
+              <img src="./f1.images/italy.webp" class="w-6 h-6 rounded-full" alt="Driver Icon">
+              <span>Italy</span>
+            </div>
+          </td>
+          <td class="px-4 py-3">Mercedes</td>
+          <td class="px-3 py-3 font-bold  rounded-r-lg">60</td>
+        </tr>
+        
+    </tbody>
+  </table>
+  </div>
+     <div class="text-center mt-6">
+    <button id="toggle-button" class="text-white text-lg font-semibold flex items-center justify-center mx-auto hover:text-red-500 transition-colors duration-200">
+      <span id="button-text">Show all</span>
+      <svg id="arrow-icon" class="w-5 h-5 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+  </div>
+   
+  </div>
+</section>
+
+<section class="bg-[#0b0c10] p-10  ">
+    <div class="h-px bg-gray-600 w-full mx-4 my-8"></div>
+    <div class="container mx-auto">
+          
+        <div class="flex justify-between items-center mb-10">
+      <h2 class="text-5xl font-extrabold text-white font-[bungee]">
+        <span >OUR PARTNERS</span>
+      </h2>
+      </div>
+        <div class="grid  lg:grid-cols-6 gap-10 items-center justify-items-center mb-6 ">
+      <img src="./f1.images/lvmhlogo.png" alt="LVMH" class="h-32 object-contain">
+      <img src="./f1.images/firellilogo.png" alt="Pirelli" class="h-32 object-contain">
+      <img src="./f1.images/heinkeinlogo.png" alt="Heineken" class="h-32 object-contain">
+      <img src="./f1.images/awssss.png" alt="AWS" class="h-32 object-contain">
+      <img src="./f1.images/lenovo.webp" alt="Lenovo" class="h-32 object-contain">
+      <img src="./f1.images/dhl logo.png" alt="DHL" class="h-32 object-contain">
+      <img src="./f1.images/qatarairways.png" alt="Qatar Airways" class="h-32 object-contain">
+      </div>
+          
+    </div>
+    <div class="h-px bg-gray-600 w-full mx-4 my-8"></div>
+</section>
+<!--update race timings
+<section  id="race-info" class="bg-[#1a1b1e] text-white p-6 rounded-xl shadow-lg mt-6 hidden">
+<h2 class="text-3xl font-bold mb-4 font-[bungee]">Next Race</h2>
+  <p id="race-name"></p>
+  <p id="race-date"></p>
+  <p id="race-time"></p>
+  <p id="race-circuit"></p>
+</section>-->
+
+</main>
+<script src="11.js"></script>
+</body>
+</html>
