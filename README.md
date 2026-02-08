@@ -14,8 +14,7 @@ A **full-stack Formula 1 website** providing a live-like F1 experience with **dr
 - **Driver Cards:** View detailed stats for all F1 drivers.  
 - **Standings Table:** Current season driver rankings with points, wins, and average points per race.  
 - **Driver Comparison:** Compare two drivers’ statistics side by side.  
-- **Race Prediction:** AI-powered predictions for the next race podium using synthetic data.  
-- **Team Table:** Detailed team information and standings.  
+- **Race Prediction:** AI-powered predictions for the next race podium using synthetic data.    
 - **News Section:** Fully static in HTML for quick access.  
 - **Sponsor Footer:** Branded footer with sponsor logos.  
 
@@ -58,9 +57,6 @@ F1-Website/
 
 - Uses **Random Forest Classifier** trained on **synthetic F1 driver data**.  
 - Key features:  
-  - Average points per race  
-  - Recent driver form  
-  - Team performance  
   - Wins & podiums  
 - Predicts **top 10 drivers most likely to podium** in the next race.  
 
