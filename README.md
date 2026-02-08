@@ -1,74 +1,74 @@
-🏎️ F1 Dashboard Website
+# 🏎️ F1 Dashboard Website
 
-A full-stack Formula 1 website providing live-like F1 experience with driver statistics, team standings, race predictions, and comparisons. Built with Flask (Python) backend, HTML/CSS/JS frontend, and AI-powered race predictions.
+A **full-stack Formula 1 website** providing a live-like F1 experience with **driver statistics, team standings, race predictions, and comparisons**. Built with a **Flask (Python) backend**, **HTML/CSS/JS frontend**, and **AI-powered race predictions**.
 
-🔹 Features
+---
 
-Driver Cards: View detailed stats for all F1 drivers.
+<img width="1882" height="951" alt="Screenshot 2026-02-08 140536" src="https://github.com/user-attachments/assets/a278e935-9f21-4c42-bf74-3bdca1dfbf7e" />
+<img width="1866" height="1055" alt="Screenshot 2026-02-08 140546" src="https://github.com/user-attachments/assets/d2183452-be4b-42c8-96ea-15312ea0ea05" />
+<img width="1817" height="1011" alt="Screenshot 2026-02-08 140606" src="https://github.com/user-attachments/assets/ff1f930c-86d8-45ac-b094-5427b7bbb2ff" />
 
-Standings Table: Current season driver rankings with points and wins.
 
-Driver Comparison: Compare two drivers’ stats side by side.
+## 🔹 Features
 
-Race Prediction: AI-powered predictions for next race podium using synthetic data.
+- **Driver Cards:** View detailed stats for all F1 drivers.  
+- **Standings Table:** Current season driver rankings with points, wins, and average points per race.  
+- **Driver Comparison:** Compare two drivers’ statistics side by side.  
+- **Race Prediction:** AI-powered predictions for the next race podium using synthetic data.  
+- **Team Table:** Detailed team information and standings.  
+- **News Section:** Fully static in HTML for quick access.  
+- **Sponsor Footer:** Branded footer with sponsor logos.  
 
-Team Table: Information about all F1 teams.
+---
 
-News Section: Optional (can use static HTML news).
+## 🔹 Technologies
 
-Sponsor Footer: Official F1 feel with sponsors and branding.
+**Frontend:**  
+- HTML  
+- CSS  
+- JavaScript  
 
-🔹 Tech Stack
+**Backend:**  
+- Python  
+- Flask  
+- Flask-CORS  
 
-Frontend:
+**AI/ML:**  
+- Python `pandas`, `numpy`, `scikit-learn`  
+- Random Forest Classifier with synthetic training data  
 
-HTML
+---
 
-CSS
+## 🔹 Project Structure
 
-JavaScript
-
-Backend:
-
-Python
-
-Flask
-
-Flask-CORS
-
-AI/ML:
-
-Python pandas, numpy, scikit-learn
-
-Random Forest Classifier with synthetic data
-
-🔹 Project Structure
 F1-Website/
 │
-├── app.py                      # Flask backend
+├── app.py # Flask backend
 ├── services/
-│   ├── DataProcessor.py        # Driver/standings API
-│   └── RacePredictionService.py# ML predictor
+│ ├── DataProcessor.py # Driver/standings API
+│ └── RacePredictionService.py# ML predictor
 ├── templates/
-│   └── index.html              # Frontend pages
+│ └── index.html # Frontend pages
 ├── static/
-│   ├── css/
-│   ├── js/
-│   └── images/
+│ ├── css/
+│ ├── js/
+│ └── images/
 └── README.md
+## 🔹 ML Race Prediction
 
-🔹 ML Race Prediction
+- Uses **Random Forest Classifier** trained on **synthetic F1 driver data**.  
+- Key features:  
+  - Average points per race  
+  - Recent driver form  
+  - Team performance  
+  - Wins & podiums  
+- Predicts **top 10 drivers most likely to podium** in the next race.  
 
-Uses Random Forest Classifier trained on synthetic F1 driver data.
+---
 
-Features used:
+## 🔹 Notes
 
-Average points per race
-
-Recent driver form
-
-Team performance
-
-Wins & podiums
-
-Predicts top 10 drivers most likely to podium next race.
+- **News section is static** in the frontend; backend API for news has been removed.  
+- All other backend routes (`/api/drivers`, `/api/standings`, `/api/compare`, `/api/predict-podium`) serve dynamic data for the frontend.  
+- The project combines **data visualization
+- 
