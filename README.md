@@ -67,4 +67,4 @@ F1-Website/
 - **News section is static** in the frontend; backend API for news has been removed.  
 - All other backend routes (`/api/drivers`, `/api/standings`, `/api/compare`, `/api/predict-podium`) serve dynamic data for the frontend.  
 - The project combines **data visualization
-- 
+  
