@@ -233,17 +233,29 @@
         class="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 transition-all duration-200"
       ></span>
     </a>
-    <a href="#" class="relative pb-2 font-bold text-lg text-gray-400 hover:text-red-600 transition-colors duration-200 group">
+    <!--<a href="#" class="relative pb-2 font-bold text-lg text-gray-400 hover:text-red-600 transition-colors duration-200 group">
       Teams
       <span
         class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-200 group-hover:w-full"
       ></span>
-    </a>
+    </a>-->
   </div>
   
   <div class="px-6 py-4">
   <input id="driverSearch" type="text" placeholder="Search driver..." 
          class="p-2 rounded-md mb-6 w-full bg-[#1a1b1e] text-white placeholder-gray-400">
+</div>
+<div class="flex justify-between items-center mb-4 px-6">
+  <div class="flex items-center space-x-4">
+    <h3 class="text-white text-xl font-bold">Driver Standings</h3>
+    <button id="refreshStandings" class="px-4 py-2 bg-red-600 text-white text-sm font-bold rounded-md hover:bg-red-700 transition flex items-center space-x-2">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+      </svg>
+      <span>Refresh Standings</span>
+    </button>
+  </div>
+  <p class="text-gray-400 text-sm" id="lastUpdated">Updated: Live from FastF1</p>
 </div>
 
     <div class="overflow-x-auto">
@@ -423,6 +435,100 @@
   </div>
 </section>
 
+<section id="compareSection" class="bg-[#0c0b10] py-16 px-8">
+    <div class="h-px bg-gray-600 w-full mx-4 mb-12"></div>
+    
+    <div class="relative w-full h-2 bg-red-600 my-8">
+      <div class="absolute top-0 right-0 w-20 h-full bg-[linear-gradient(to_left,_#0b0c10_50%,_transparent_50%)]"></div>
+    </div>
+    
+    <div class="mb-12">
+      <h2 class="text-5xl font-extrabold font-[bungee] text-white">
+        COMPARE DRIVERS
+      </h2>
+    </div>
+ 
+    <div class="grid md:grid-cols-2 gap-8 mb-6 px-6">
+      <div class="space-y-2">
+        <label class="text-white font-bold text-lg block">Select Driver 1</label>
+        <select id="driver1Select"
+          class="w-full p-4 rounded-lg bg-[#1a1b1e] text-white border-2 border-gray-700 
+                 focus:border-red-600 focus:outline-none transition text-lg">
+          <option value="">Choose driver...</option>
+        </select>
+      </div>
+
+      <div class="space-y-2">
+        <label class="text-white font-bold text-lg block">Select Driver 2</label>
+        <select id="driver2Select"
+          class="w-full p-4 rounded-lg bg-[#1a1b1e] text-white border-2 border-gray-700 
+                 focus:border-red-600 focus:outline-none transition text-lg">
+          <option value="">Choose driver...</option>
+        </select>
+      </div>
+    </div>
+
+    
+    <div class="text-center">
+      <button id="compareBtn"
+        class="px-12 py-4 bg-red-600 text-white font-bold text-xl rounded-lg
+               hover:bg-red-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+        🏎️ COMPARE DRIVERS
+      </button>
+      
+      <p id="compareStatus" class="text-yellow-500 text-sm mt-4">
+         Backend offline - Start Flask server for live data
+      </p>
+    </div>
+
+    <!-- Results -->
+    <div id="comparisonResult" class="hidden mt-8"></div>
+</section>
+<!-- ML PREDICTION SECTION - COMPACT VERSION -->
+<section id="predictionSection" class="bg-[#0c0b10] py-12 px-8">
+    <div class="h-px bg-gray-700 w-full mb-8"></div>
+    
+    <div class="mb-12">
+      <h2 class="text-5xl font-extrabold font-[bungee] text-white">
+       PREDICTION ANALYSIS
+      </h2>
+    </div>
+
+        <div class="text-center mb-6">
+    <button id="predictBtn"
+        class="px-12 py-4 bg-red-600 text-white font-bold text-xl rounded-lg
+               hover:bg-red-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+       PREDICT NEXT RACE PODIUM
+    </button>
+    
+    <p id="predictStatus" class="text-yellow-500 text-sm mt-4">
+        Click button to generate predictions
+    </p>
+</div>
+
+        <!-- Results - Compact Table Design -->
+        <div id="predictionResult" class="hidden">
+            <div class="bg-[#15161a] rounded-lg overflow-hidden border border-gray-800">
+                
+                <!-- Table Header -->
+                <div class="grid grid-cols-12 gap-4 p-3 bg-[#1a1b1f] border-b border-gray-800 text-xs font-semibold text-gray-400">
+                    <div class="col-span-1 text-center">#</div>
+                    <div class="col-span-5">DRIVER</div>
+                    <div class="col-span-3">TEAM</div>
+                    <div class="col-span-3 text-right">PROBABILITY</div>
+                </div>
+                
+                <!-- Table Body -->
+                <div id="predictionsList" class="divide-y divide-gray-800">
+                    <!-- Predictions inserted here -->
+                </div>
+                
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
 <section class="bg-[#0b0c10] p-10  ">
     <div class="h-px bg-gray-600 w-full mx-4 my-8"></div>
     <div class="container mx-auto">
