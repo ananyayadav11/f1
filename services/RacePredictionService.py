@@ -11,7 +11,7 @@ class RacePredictionService:
     """ML-based service for predicting race outcomes"""
     
     def __init__(self):
-        self.model = RandomForestClassifier(n_estimators=100, random_state=42)
+        self.model = RandomForestClassifier(n_estimators=50, max_depth=5, random_state=42)
         self.scaler = StandardScaler()
         self.is_trained = False
         self.accuracy = 0.0  
@@ -78,18 +78,18 @@ class RacePredictionService:
         
         # MID-FIELD DRIVERS (Occasional podium finishers - 20% podium rate)
         # Represents drivers like Albon, Gasly - can get podium but rare
+        # TOP-TIER DRIVERS (High performers - realistic 70%-85% podium rate)
         for _ in range(100):
-            # Sometimes mid-field drivers get lucky (rain, crashes ahead, great strategy)
-            podium = 1 if np.random.random() < 0.20 else 0
-            
+            podium = 1 if np.random.random() < 0.7 else 0   # reduced from 0.85 to 0.7
             data.append({
-                'avg_points': np.random.uniform(2, 8),        # Moderate points
-                'recent_form': np.random.uniform(0.3, 0.7),   # Average form
-                'team_performance': np.random.uniform(0.4, 0.7),  # Mid-field teams
-                'wins': np.random.randint(0, 3),              # Very few wins
-                'podiums': np.random.randint(0, 5),           # Few podiums
+                'avg_points': np.random.uniform(7, 18),      # add overlap with mid-tier
+                'recent_form': np.random.uniform(0.5, 0.95), # slightly more variation
+                'team_performance': np.random.uniform(0.65, 1.0),
+                'wins': np.random.randint(1, 10),
+                'podiums': np.random.randint(3, 20),
                 'podium': podium
-            })
+    })
+
         
         # BACK-MARKERS (Almost never podium - 3% podium rate)
         # Represents Williams, Haas type teams - podium is extremely rare
@@ -98,11 +98,11 @@ class RacePredictionService:
             podium = 1 if np.random.random() < 0.03 else 0
             
             data.append({
-                'avg_points': np.random.uniform(0, 3),        # Low/no points
-                'recent_form': np.random.uniform(0, 0.4),     # Poor form
-                'team_performance': np.random.uniform(0, 0.5),    # Weak cars
-                'wins': 0,                                     # No wins
-                'podiums': np.random.randint(0, 2),           # 0-1 podiums max
+                'avg_points': np.random.uniform(0, 3),        
+                'recent_form': np.random.uniform(0, 0.4),    
+                'team_performance': np.random.uniform(0, 0.5),    
+                'wins': 0,                                     
+                'podiums': np.random.randint(0, 2),           
                 'podium': podium
             })
         

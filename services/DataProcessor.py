@@ -77,52 +77,7 @@ class DataProcessor:
             print(f"API Error: {e}. Using mock data.")
             return self._get_mock_standings()
     
-    def get_news(self):
-        """Return mock news data (since no free F1 news API)"""
-        return [
-            {
-                'id': 1,
-                'title': "How Williams' 2025 season played out so far",
-                'image': './f1.images/williams-driver.avif',
-                'category': 'Team News',
-                'date': '2025-01-05'
-            },
-            {
-                'id': 2,
-                'title': "8 of McLaren's strongest line-ups before Norris and Piastri",
-                'image': './f1.images/norris-piasti.webp',
-                'category': 'History',
-                'date': '2025-01-04'
-            },
-            {
-                'id': 3,
-                'title': 'How title-challenger Norris is redefining F1 fashion',
-                'image': './f1.images/norris2.webp',
-                'category': 'Lifestyle',
-                'date': '2025-01-03'
-            },
-            {
-                'id': 4,
-                'title': "How Aston Martin's 2025 season has played out so far",
-                'image': './f1.images/aston-martin.webp',
-                'category': 'Team News',
-                'date': '2025-01-02'
-            },
-            {
-                'id': 5,
-                'title': 'Hamilton shares more about his special Ferrari documents',
-                'image': './f1.images/hamilton.webp',
-                'category': 'Driver News',
-                'date': '2025-01-01'
-            },
-            {
-                'id': 6,
-                'title': 'Albon believes 2025 is his best season so far in F1',
-                'image': './f1.images/albon.webp',
-                'category': 'Driver News',
-                'date': '2024-12-31'
-            }
-        ]
+    
     
     def get_driver_detail(self, driver_id):
         """Get detailed statistics for a specific driver"""
